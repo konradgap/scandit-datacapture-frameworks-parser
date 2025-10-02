@@ -1,0 +1,11 @@
+# platform :ios, '9.0'
+
+target 'Example' do
+  use_frameworks!
+
+  pod 'scandit-datacapture-frameworks-parser', :path => '../'
+
+  # REPLACE-BEGIN
+  pod 'scandit-datacapture-frameworks-core', :path => '../../scandit-datacapture-frameworks-core'
+  # REPLACE-END
+end
