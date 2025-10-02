@@ -1,21 +1,10 @@
-// swift-tools-version: 5.7
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version: 5.9
 import PackageDescription
-import Foundation
 
-// Read version from info.json
-func getVersion() -> String {
-    let infoJSONPath = Context.packageDirectory + "/../info.json"
-    guard let data = try? Data(contentsOf: URL(fileURLWithPath: infoJSONPath)),
-          let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
-          let version = json["version"] as? String else {
-        fatalError("Could not read version from info.json at \(infoJSONPath)")
-    }
-    return version
-}
-
-let version = getVersion()
+// Version is set during release process
+// When developing locally in monorepo, the version is read from package.json/info.json
+// When published to GitHub, the version must be hardcoded
+let version = "8.1.0-beta.1-SNAPSHOT"
 
 let package = Package(
     name: "scandit-datacapture-frameworks-parser",
