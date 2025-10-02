@@ -4,7 +4,7 @@ import PackageDescription
 // Version is set during release process
 // When developing locally in monorepo, the version is read from package.json/info.json
 // When published to GitHub, the version must be hardcoded
-let version = "8.1.0-beta.1-SNAPSHOT"
+let version = "7.6.1"
 
 let package = Package(
     name: "scandit-datacapture-frameworks-parser",
